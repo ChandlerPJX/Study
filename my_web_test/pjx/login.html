@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+<head>
+    <meta charset="UTF-8">
+    
+    <title>请先登录</title>
+    <link rel="icon" href="./images/登录.svg" type="images/x-icon">
+    <link rel="stylesheet" href="./Css/login.css">
+    <script>
+      function myFunction()
+      {
+        var x=document.getElementById("demo").value;
+        if(x==""||isNaN(x))
+        {
+          alert("请输入纯数字密码！");
+        }
+      }
+      </script>
+</head>
+<body >
+  <script>
+   window.alert("请登录");
+  </script>
+	<audio src="./music/m-taku%20-%20Komorebi%20(叶隙间洒落的阳光).mp3"
+           autoplay="autoplay" controls ="controls" preload="auto"></audio>
+    <div id="login-box">
+        <h1>登录</h1>
+        <div class="form" alert>
+          <div class="item" >
+            <i><img src="./images/24gf-user2.svg" alt="" ></i>
+            <input type="text" placeholder="用户名" title="请输入用户名"required >
+          </div>
+          <div class="item">
+            <i><img src="./images/密码.svg" alt=""></i>
+            <input type="password" placeholder="密码" title="请输入密码" id="demo" required>
+          </div>
+        </div>
+        
+        <a href="index.html" ><button type="button" onclick="myFunction()">登录</button></a>
+
+    </div>
+
+</body>
+</html>
