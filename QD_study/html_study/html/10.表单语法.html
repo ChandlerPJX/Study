@@ -13,16 +13,44 @@
 -->
 <form action="1.我的第一个网页.html" method="post">
 
-<p>
-    &nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;&nbsp;&nbsp;: <input type="text" name="username"> <br/>
-    password: <input type="password" name="pwd">
-</p>
+    <p>
+        <!--文本输入框： input
+            value ,默认值
+            maxlength 长度限制
+          -->
+        &nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;&nbsp;&nbsp;: <input type="text" name="username" value="name" maxlength="8">
+        <br/>
+        password: <input type="password" name="pwd">
+    </p>
 
-<!--查看 type都有哪些属性-->
-<p>
-    <input type="submit">
-    <input type="reset">
-</p>
+    <p>性别:
+        <!--radio单选框;
+            name 表示分组（只能选一个）
+            value 单选框的值
+            -->
+        <label>
+            <input type="radio" value="boy" name="sex">
+        </label> 男
+        <label>
+            <input type="radio" value="girl" name="sex">
+        </label> 女
+
+    </p>
+
+    <!--查看 type都有哪些属性-->
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
 </form>
+
+
+<form id="dreamduform" action="http://www.dreamdu.com/dreamdu.php" method="post">
+    <label for="contactus">联系我们</label>
+    <textarea cols="50" rows="10" id="contactus">
+        可爱的猴子 dreamdu[at]163[dot]com
+    </textarea>
+</form>
+
 </body>
 </html>
