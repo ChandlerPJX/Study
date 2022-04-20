@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--内部样式（其次）-->
+    <style>
+        h1{
+            color : green;
+        }
+    </style>
+
+<!--连接式-->
+    <link rel="stylesheet" href="css/style.css">
+<!--导入式，为css2.1特有-->
+    <style>
+        @import url("css/style.css");
+    </style>
+<!--注意这里有就近原则， 及谁距离h1近，谁先-->
+</head>
+<body>
+
+<!--行内样式(优先级最高)： 在标签元素中编写style -->
+<h1 style="color: brown">标题</h1>
+<h1 >标题</h1>
+
+</body>
+</html>

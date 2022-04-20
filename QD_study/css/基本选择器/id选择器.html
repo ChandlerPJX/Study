@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        /*id选择器 以#开头
+            id 必须保证全局唯一
+        */
+        #id {
+            color: #8017c1;
+        }
+
+        .t1 {
+            /*类选择器， 以.开头
+            使对应选择器的class 才改变
+            而且可以实现class的复用
+             */
+            color: blanchedalmond;
+        }
+
+        h1 {
+            color: coral;
+        }
+    </style>
+<!--三个选择器不遵循就近原则，
+    优先级别： id > 类 > 标签
+-->
+</head>
+<body>
+<h1 id="id">141431413</h1>
+<h1 class="t1">141431413</h1>
+<h1 class="t1">141431413</h1>
+<h1>141431413</h1>
+
+</body>
+</html>

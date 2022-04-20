@@ -1,0 +1,40 @@
+
+#nav {
+    width: 356px;
+    background: #e0e1c6;
+}
+
+
+.title {
+    font-family: monospace;
+    font-size: 30px;
+    text-indent: 1em;
+    line-height: 55px;
+    color: #f8d5f1;
+    background: #e31269;
+}
+
+/*
+    list-style:
+     none 无点或者数字
+     circle 空心圆
+     decimal 数字
+ */
+
+ul li {
+    list-style: none;
+    text-indent: 1em;
+    line-height: 30px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #1871e3;
+    text-decoration: underline;
+
+}

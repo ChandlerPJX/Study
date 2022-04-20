@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+<!--id + class 选择器结合-->
+    <style>
+
+        .demo a {
+            float: left;
+            display: block;
+            height: 80px;
+            width: 80px;
+            border-radius: 10px;
+            background: coral;
+            text-align: center;
+            color: gray;
+            margin-right: 5px;
+            font: bold 20px/50px Arial;
+        }
+
+        /* 练习题：
+           选择存在id元素的
+           a[id=first]{
+           }
+         */
+        /*选择 class张以 links 开头的
+            = 为绝对等于
+            *= 为包含
+            ^= 以这个开头
+            $= 以这个结尾
+        */
+
+        /*
+        = 为绝对等于
+        a[class="links item"]{
+            background: #1fe0e0;
+        }
+        */
+        /*
+         *= 为包含
+        a[class*="links"]{
+            background: #8017c1;
+        }
+
+         a[class*="item"]{
+            background: aqua;
+        }
+
+         */
+
+
+        /*
+          ^= 以这个开头
+        a[href^="https"]{
+            background: #8017c1;
+        }
+         */
+
+        /*
+        $= 以这个结尾
+           a[href$="com"]{
+               background: #8017c1;
+           }
+         */
+
+    </style>
+
+</head>
+<body>
+
+<p class="demo">
+
+    <a href="https://www.baidu.com" class=" links item baidu" id="first">1</a>
+    <a href="https://github.com" class="links item github" target="_blank" title="github">2</a>
+    <a href="images/11.jpg" class="links item">3</a>
+    <a href="images/11.html" class="links item">4</a>
+    <a href="" title="null">5</a>
+    <a href="aaa" class="links item">6</a>
+    <a href="bbb" class="links item">7</a>
+    <a href="ccc.file" class="links item">8</a>
+
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        /*1. 后代选择器： 在某个元素后面*/
+        body p {
+            background: aqua;
+        }
+
+        /*2. 子选择器： 只有一代*/
+        body > p {
+            background: green;
+        }
+
+        /*3. 相邻兄弟选择器. 只有一个 （向下）*/
+        .t + p {
+            background: blanchedalmond;
+        }
+
+        /*4. 通用兄弟选择器  同级别的都会被选中 （向下）*/
+        .t ~ p {
+            background: #8017c1;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--
+
+ 1. 后代选择器： 在某个元素后面
+ 2. 子选择器： 只有一代
+ 3. 相邻兄弟选择器.
+ 4. 通用选择器
+
+-->
+<p class="t1">p0</p>
+<p>p1</p>
+<p class="t2">p2</p>
+<p>p3</p>
+<ul>
+    <li>l1
+        <p class="t1">p4.0</p>
+        <p>p4.1</p>
+        <p>p4.2</p>
+        <p>p4.3</p>
+    </li>
+
+    <li>l2
+        <p class="t1">p5.0</p>
+        <p class="t2">p5.1</p>
+        <p id>p5.2</p>
+        <p>p5.3</p>
+    </li>
+
+    <li>l3
+        <p class="t1">p6.0</p>
+        <p>p6.7</p>
+        <p>p6.8</p>
+    </li>
+</ul>
+<p>P7</p>
+</body>
+</html>
