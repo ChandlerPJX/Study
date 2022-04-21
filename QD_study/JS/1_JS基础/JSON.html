@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+
+
+<script>
+    var usr = {
+        name: 'root',
+        age: 19,
+        sex: 'man'
+    }
+
+    //对象转换为 json
+
+    console.log(usr);
+    /*
+    {name: "root", age: 19, sex: "man"}
+    age: 19
+    name: "root"
+    sex: "man"
+    __proto__: Object
+     */
+    var usr1 = JSON.stringify(usr);
+
+    console.log(usr1);  //{"name":"root","age":19,"sex":"man"}
+</script>
+</html>

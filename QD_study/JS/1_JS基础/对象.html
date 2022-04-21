@@ -15,7 +15,7 @@
       注意用，隔开而不是;
      */
 
-    // 创建方法1   var a ={}
+    // 创建方法 1. var a ={}
     var a = {
         name: 'a',
         age: 19,
@@ -31,14 +31,60 @@
     console.log(a['age']);
     // 调用方法
     a.Hi();
+    //动态的删除对象  删除a中的sex属性。
+    delete a.sex;
+    //动态添加属性， 直接赋值就可
+    a.haha = 'hahaha';
+    console.log(a);
 
-    //方法二  var a = new Object();
+    //判断属性是否在对象之中
+    console.log( 'haha' in a);   //true
+
+    //判断属性是否是对象自身拥有的hasOwnProperty
+    a.hasOwnProperty('haha');
+
+
+
+
+
+
+
+
+
+
+
+    //方法2.  var a = new Object();
 
     var obj = new Object();
     obj.name = 'aa';
     obj.age = 12;
     console.log(obj.name);
 
+    //3. 利用构造函数创建对象
+    /*
+     function 构造函数名() {
+         this.属性 = 值,
+         this.方法 = function () {
+         }
+     }
+      new 构造函数名();
+    */
+
+    function Star(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
+    var me = new Star('pjx', '24', 'man');
+
+    console.log(me);
+    console.log(typeof me)
+    console.log('---------------------------------')
+
+    for (var k in me) {
+        console.log(k);  // k变量输出的是属性名字
+        console.log(me[k]); // me[k] 输出的是属性的数值
+    }
 
 
 </script>
