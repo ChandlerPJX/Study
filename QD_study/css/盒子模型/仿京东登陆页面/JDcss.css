@@ -1,0 +1,28 @@
+/*把所有的如（body，h1,li） 初始化为0*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #eec4c4;
+}
+
+h2 {
+    color: #e31269;
+    background: #e0e1c6;
+}
+
+#box {
+    width: 300px;
+    border: 3px solid red;
+    margin: 0 auto;
+}
+
+#box form {
+    width: 300px;
+    height: 200px;
+    background: white;
+}

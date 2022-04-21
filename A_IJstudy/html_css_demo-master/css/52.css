@@ -9,7 +9,7 @@ body{
 }
 .bg{
     /* 背景图片 */
-    background-image: url("../images/mountain.jpg");
+    background-image: url("../../../win/css_fun/images/mountain.jpg");
     /* 对图片进行剪切，保留原始比例 */
     background-size: cover;
     /* 设置背景图片的定位 */

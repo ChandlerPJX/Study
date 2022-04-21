@@ -52,7 +52,7 @@ body{
     width: 1000px;
     height: 550px;
     /* 背景图片 不平铺 */
-    background: url("../images/op1/1.jpg") no-repeat;
+    background: url("../../../win/css_fun/images/op1/1.jpg") no-repeat;
     /* 对图片进行剪切，保留原始比例 */
     background-size: cover;
     /* 图片定位正中间 */
@@ -91,19 +91,19 @@ body{
 }
 /* 鼠标移入小图，改变大图 */
 .container ul li:nth-child(1):hover ~ .big-img{
-    background-image: url("../images/op1/1.jpg");
+    background-image: url("../../../win/css_fun/images/op1/1.jpg");
 }
 .container ul li:nth-child(2):hover ~ .big-img{
-    background-image: url("../images/op1/2.jpg");
+    background-image: url("../../../win/css_fun/images/op1/2.jpg");
 }
 .container ul li:nth-child(3):hover ~ .big-img{
-    background-image: url("../images/op1/3.jpg");
+    background-image: url("../../../win/css_fun/images/op1/3.jpg");
 }
 .container ul li:nth-child(4):hover ~ .big-img{
-    background-image: url("../images/op1/4.jpg");
+    background-image: url("../../../win/css_fun/images/op1/4.jpg");
 }
 .container ul li:nth-child(5):hover ~ .big-img{
-    background-image: url("../images/op1/5.jpg");
+    background-image: url("../../../win/css_fun/images/op1/5.jpg");
 }
 /* 鼠标移入小图，改变移动框的位置 */
 .container ul li:nth-child(1):hover ~ .frame{

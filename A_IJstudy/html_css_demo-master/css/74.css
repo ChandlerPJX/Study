@@ -27,7 +27,7 @@ body{
     width: 500%;
     height: 100%;
     z-index: 1;
-    background-image: url("../images/cloud_music/1.jpg");
+    background-image: url("../../../win/css_fun/images/cloud_music/1.jpg");
     background-size: 6000px;
     background-position: center center;
     /* 模糊滤镜 */
