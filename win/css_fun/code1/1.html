@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+
+    <link rel="stylesheet" href="1.css">
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="container">
+    <h1>Login</h1>
+    <form>
+        <input class="tbx" type="text" name="ursename" placeholder="账号">
+        <input class="tbx" type="password" name="pwd" placeholder="密码">
+        <input class="sub" type="submit" value="登录">
+    </form>
+</div>
+
+<script>
+
+    // 定义 con 绑定 .container
+    const con = document.querySelector('.container');
+    let isIn = true;   //鼠标进入的门
+    let isOut = false;  //鼠标出来的门
+
+    var span;       // 存放未生成的元素
+
+    // 添加监听
+    // 监听鼠标进入事件
+    con.addEventListener('mouseenter', (e) => {
+        //如果进去的门是开的
+        if (isIn) {
+            //获得鼠标位置
+            // 生成元素的位置= 进入点距离窗口的距离- 父盒子距离边框的距离
+            let inX = e.clientX - e.target.offsetLeft;
+            let inY = e.clientY - e.target.offsetTop;
+
+
+            //创建span元素，给他对应的坐标
+            let el = document.createElement('span');
+            el.style.left = inX + 'px';
+            el.style.right = inY + 'px';
+            //添加到 con对应的父元素之中
+            con.appendChild(el);
+
+            $('.container span').removeClass('out'); //移除出去的动画
+            $('.container span').addClass('in'); //添加进入的动画
+            span = document.querySelector('.container span');
+            isIn = false;
+            isOut = true;
+        }
+    })
+
+    //监听出去的事件
+    con.addEventListener('mouseleave', (e) => {
+        if (isOut) {
+            //获得鼠标位置
+            // 生成元素的位置= 进入点距离窗口的距离- 父盒子距离边框的距离
+            let outX = e.clientX - e.target.offsetLeft;
+            let outY = e.clientY - e.target.offsetTop;
+
+            $('.container span').removeClass('in');  //移除进入动画
+            $('.container span').addClass('out');   //添加离开动画
+
+            $('.out').css('left', outX + 'px');
+            $('.out').css('top', outY + 'px');
+
+            isOut = false;
+
+            setTimeout(() => {
+                con.removeChild(span);      // 删除元素
+                isIn = true;                  // 打开进入的门
+            }, 500);
+        }
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*设置高度为百分百*/
+    height: 100vh;
+    /*弹性盒子模型*/
+    display: flex;
+    /*限免两个属性，让body的子类居中*/
+    justify-content: center;
+    align-items: center;
+    background: darkslateblue;
+}
+
+.container {
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6e30cb;
+    /* 盒子阴影*/
+    box-shadow: 15px 15px 10px rgba(33, 45, 58, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.container form {
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.container form .tbx {
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: none;
+    color: white;
+    font-size: 15px;
+}
+
+.container form .tbx::placeholder {
+    color: white;
+    font-size: 15px;
+}
+
+.container form .sub {
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    letter-spacing: 5px;
+    background: none;
+    border-bottom: 1px solid #ffffff;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+
+.container h1 {
+    color: aliceblue;
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    /*文字阴影*/
+    text-shadow: 5px 5px 5px rgba(33, 45, 51, 0.3);
+    z-index: 1;
+}
+
+/*鼠标进入的动画样式*/
+.container .in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: aqua;
+    transform: translate(-50%, -30%);
+    /*in动画，持续0.5s  缓出的时间函数  停留在最后一帧*/
+    animation: in 0.5s ease-out forwards;
+}
+
+/*鼠标离开的动画样式*/
+.container .out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+    background: #dd13f5;
+    transform: translate(-50%, -30%);
+    /*out 动画  0.5s 缓出函数 最后一帧*/
+    animation: out 0.5s ease-out forwards;
+}
+
+/*设置进入的动画*/
+@keyframes in {
+    /*初始化关键帧*/
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 1200px;
+        height: 1200px;
+    }
+}
+
+/*设置离开的动画*/
+@keyframes out {
+    /*初始化关键帧*/
+    0% {
+        width: 1200px;
+        height: 1200px;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+    }
+
+}
