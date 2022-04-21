@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+    /*
+     arguments 只有函数才具备这个对象，而且每个函数都含有这个对象
+     里面存放了传递的所有实参，且是以伪数组进行存储
+     具有 length
+     是按照索引方式进行存储
+     不具备数组的一些方法
+     */
+
+    function fn() {
+        console.log(arguments);
+        console.log(arguments.length);
+        console.log(arguments[3]);
+    }
+
+    fn(142,'aa',"asdasda",'1232313',true,124);
+</script>
+
+
+</html>

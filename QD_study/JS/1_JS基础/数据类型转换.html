@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        /*数字转为字符串
+         .toString();
+         String();
+         拼接字符串 ->  a + ''
+        */
+        var a = 10.01;
+        var b = a.toString();
+        var b1 = String(a);
+        var b3 = a + '';
+        console.log(a);
+        console.log(b);
+        console.log(b1);
+        console.log(b3);
+
+        console.log('------------------------------');
+        /*
+        转换为数字
+        1.  parseInt()  只能为int
+        2.  parseFloat
+        3.  Number
+         */
+        var c = '100.1';
+        var d = '100px';
+        var c1 = parseInt(c);    //  转为int  c1= 100
+        var c2 = parseFloat(c);  //转为float  c1= 100.1
+        var c3 = Number(c);     // c3 = 100.1
+        var c4 = parseInt(d); // c4 = 100 ， 会自动把后面的字母去除
+        console.log(c);
+        console.log(c1);
+        console.log(c2);
+        console.log(c3);
+        console.log(c4);
+
+
+        /*
+        转为boolean 使用Bollean（）方法
+
+        ps : 除了 0 NaN null undefined  会转为false 其他的都会转换为true
+         */
+        var z = '1';
+        var z1 = Boolean(z);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

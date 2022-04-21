@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+
+
+<script>
+    /*
+    对象创建方法
+      用键值对形式设置属性  name : value,
+      注意用，隔开而不是;
+     */
+
+    // 创建方法1   var a ={}
+    var a = {
+        name: 'a',
+        age: 19,
+        sex: 'man',
+
+        Hi: function () {
+            console.log('!!!!!!hi!!!!');
+        }
+    };
+    //调用属性， a.name
+    console.log(a.name);
+    //  a[' age ']
+    console.log(a['age']);
+    // 调用方法
+    a.Hi();
+
+    //方法二  var a = new Object();
+
+    var obj = new Object();
+    obj.name = 'aa';
+    obj.age = 12;
+    console.log(obj.name);
+
+
+
+</script>
+</html>
