@@ -7,7 +7,6 @@
 <body>
 </body>
 
-
 <script>
     /*
     对象创建方法
@@ -20,9 +19,8 @@
         name: 'a',
         age: 19,
         sex: 'man',
-
         Hi: function () {
-            console.log('!!!!!!hi!!!!');
+            console.log('----HI------');
         }
     };
     //调用属性， a.name
@@ -38,20 +36,10 @@
     console.log(a);
 
     //判断属性是否在对象之中
-    console.log( 'haha' in a);   //true
+    console.log('haha' in a);   //true
 
     //判断属性是否是对象自身拥有的hasOwnProperty
     a.hasOwnProperty('haha');
-
-
-
-
-
-
-
-
-
-
 
     //方法2.  var a = new Object();
 
@@ -75,6 +63,7 @@
         this.age = age;
         this.sex = sex;
     }
+
     var me = new Star('pjx', '24', 'man');
 
     console.log(me);
@@ -85,7 +74,6 @@
         console.log(k);  // k变量输出的是属性名字
         console.log(me[k]); // me[k] 输出的是属性的数值
     }
-
 
 </script>
 </html>

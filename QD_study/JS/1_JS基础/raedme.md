@@ -1,5 +1,5 @@
 
- 有空把他进行文档的总结；
+ 标注： 近期把其他他文档进行总结；
 
 进行了JS的基础学习。 
 如
@@ -31,16 +31,27 @@
         声明（有参、无参、返回值）与调用 .
         arguments 的使用
 
-对象类型及相关知识  for  in  对对象的遍历
+对象类型及相关知识 ：
+            对对象的遍历  for  in
+            对象的继承
+            ...
 
-JS作用域的相关知识
+JS作用域的相关知识；
 
-
-Map 和 Set集合
+Map 和 Set集合：
+        key:value 
+        get 和set 方法
 
 Data日期对象， 几种方法
+            now.getFullYear();
+            now.getMonth();
+            now.getDay();
+            now.getHours();
+            now.getMinutes();
+            now.getDate();
+            now.getTime();  
 
-JSON对象 ，轻量级数据交换格式/ 数据传输的格式
+JSON对象  轻量级数据交换格式/ 数据传输的格式
 
 Iterable迭代器
 

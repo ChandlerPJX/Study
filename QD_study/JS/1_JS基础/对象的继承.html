@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS中的继承</title>
+</head>
+<body>
+</body>
+
+
+<script>
+    'use strict'
+
+    /*
+    ES6 之后提供class继承 ,（之前使用原型对象，了解即可）
+     */
+
+    // 定一个学生类
+    class Studnet {
+
+        constructor(name) {
+            this.name = name;
+        }
+
+        hello() {
+            alert(' Hello,这是一个学生类别');
+        }
+    }
+
+    class XStudent extends Studnet {
+        constructor(name, grade) {
+            super(name);
+            this.grade = grade;
+        }
+
+        myGrade(){
+            alert('我是一个小学生');
+        }
+    }
+
+
+
+    var xiaoming = new Studnet("小明");
+    xiaoming.hello();
+    console.log(xiaoming.name);
+
+
+
+    var xiaohong = new XStudent("小红",1);
+    xiaohong.hello();
+    xiaohong.myGrade();
+    console.log(xiaohong);
+
+
+</script>
+</html>
