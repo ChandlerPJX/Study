@@ -7,6 +7,10 @@
 
     <link rel="stylesheet" href="1.css">
 
+    <style>
+
+    </style>
+
     <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -16,11 +20,34 @@
 <div class="container">
     <h1>Login</h1>
     <form>
+
+        <label>
+            <img src="../images/op1/1.jpg" alt="" id="im" >
+        </label>
+
         <input class="tbx" type="text" name="ursename" placeholder="账号">
-        <input class="tbx" type="password" name="pwd" placeholder="密码">
+        <input class="tbx" type="password" name="pwd" placeholder="密码" id="pwd">
         <input class="sub" type="submit" value="登录">
     </form>
 </div>
+
+<script>
+    let im = document.getElementById('im');
+    let pwd = document.getElementById('pwd');
+    let flag = false;
+    im.onclick = function () {
+        if (flag) {
+            im.src = '../images/op1/2.jpg';
+            pwd.type = 'text';
+            flag = false;
+        } else {
+            im.src = '../images/op1/1.jpg';
+            pwd.type='password';
+            flag = true;
+        }
+    }
+
+</script>
 
 <script>
 

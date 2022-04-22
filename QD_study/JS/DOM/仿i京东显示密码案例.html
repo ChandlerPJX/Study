@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        .box {
+            width: 400px;
+            border-bottom: 1px solid red;
+            margin: 100px;
+        }
+
+        .box input{
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        .box img{
+            position: absolute;
+            width: 24px;
+            top: 136px;
+            right: 411px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <label for="">
+        <img src="../image/1.png" alt="" id="im">
+    </label>
+    <input type="text" name="username" value=""> </br>
+    <input type="password" name="pwd" value="" id="pwd">
+
+    <script>
+        // 获取元素
+        let im = document.getElementById('im');
+        let pwd = document.getElementById('pwd');
+
+        let flag = 0;
+
+        // 注册事件
+        im.onclick = function (){
+            if(flag == 0){
+            pwd.type= 'text';
+            flag = 1;
+            im.src ="../image/fj.png";
+            }else {
+                pwd.type = 'password';
+                flag = 0;
+                im.src ="../image/1.png";
+            }
+        }
+    </script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title></title>
+
+
+</head>
+
+<body>
+
+</body>
+<script>
+    var str = 'abzzzzzzcxzassafioasf';
+    var o = {};
+    for (var i = 0; i < str.length; i++) {
+        let ch = str.charAt(i);
+        if (o[ch]) {  // o[ch] 得到的是屬性值
+            o[ch]++;
+        } else {
+            o[ch] = 1;
+        }
+    }
+    console.log(o);
+
+    var max = 0;
+    var ch='';
+    for (var k in o) {
+        // k 是屬性名字
+        // o[k] 是屬性值
+        if(max < o[k]){
+            max = o[k];
+            ch = k;
+        }
+    }
+    console.log(max);
+    console.log(ch);
+
+</script>
+
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+
+    /*
+  根据位置返回字符.
+  charAt(index)   返回指定位置的字符
+  charCodeAt(index)  返回指定位置的ASCII
+  str[index]  获取指定位置的元素
+   */
+    var str = 'abcdefg';
+    console.log(str.charAt(2));  // c
+    console.log(str.charCodeAt(2));  // 99
+    console.log(str[2]);    //c
+    //遍历str
+    for (var i = 0; i < str.length; i++) {
+        console.log(str.charAt(i));
+        console.log(str.charCodeAt(i));
+        console.log(str[i]);
+    }
+    console.log('-------------------------------------')
+
+    // 字符串拼接
+    var a = "aaaa";
+    console.log(a.length);
+    // 拼接  用 +
+    var b = "bbbb";
+    b = b + "cccc";
+    console.log(b);
+    console.log('------------------------')
+    /*
+     concat(st1,st2,st3 ...)  把這些字符串拼接
+     substr(a,b)  從a 開始截取b長度的字符
+     slice(a,b)  從a開始截取到 b（其中b取不到）
+     substring(a,b) 從a開始截取到b
+     */
+    console.log(a.concat(b));  //    console.log(a.concat(b));
+    console.log(a.sub(1, 3)); //    <sub>aaaa</sub>
+    console.log(a.slice(1, 3));     // aa
+    console.log(a.substring(1, 3)); // aa
+    console.log('################################')
+
+    // 字符串替換
+    /*
+    replace('a','b') 用b替換a
+     */
+
+    var re = 'aabbccddaa';
+    console.log(re.replace('a','z'));  // zabbccdd 只替換第一個
+    //循環替換全部的a
+
+    while (re.indexOf('a') !== -1){
+        re =re.replace('a','z');
+    }
+    console.log(re)  //     zzbbccddzz
+
+</script>
+</html>

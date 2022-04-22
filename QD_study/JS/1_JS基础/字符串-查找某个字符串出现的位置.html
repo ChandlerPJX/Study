@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+
+<script>
+    var str = "abcdabcdabcadbacbasd";
+    /*
+     先查第一个出现的位置，
+     之后 indexof 不是-1 就 往后继续查找
+     后面查找时，只需索引加1
+     */
+
+    var count = 0;
+    var index = str.indexOf('a');
+    while (index !== -1) {
+        console.log(index);
+         index = str.indexOf('a', index + 1);
+         count++;
+    }
+
+    console.log("a出现的次数为" + count);
+</script>
+</html>

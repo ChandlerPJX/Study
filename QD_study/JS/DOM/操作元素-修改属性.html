@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="lf">路飞</button>
+<button id="fj">风景</button>
+<br/>
+
+<img src="../image/1.png" alt="">
+
+
+<script>
+
+    //修改src 属性
+
+    //获取元素
+    let lf = document.getElementById('lf');
+    let fj = document.getElementById('fj');
+    let img =document.querySelector('img');
+
+    //注册事件
+
+    fj.onclick = function (){
+        img.src = "../image/fj.png";
+    }
+
+    lf.onclick = function (){
+        img.src = "../image/1.png";
+    }
+
+</script>
+</body>
+</html>

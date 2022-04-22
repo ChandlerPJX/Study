@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        div, p {
+            height: 30px;
+            width: 300px;
+            background: #0abde3;
+            color: red;
+            display: flex;
+            font-size: 20px;
+            font-family: oblique, serif;
+        }
+    </style>
+    <script>
+        /*
+         1. 改变元素内容   innerText 与 innerHTML
+         2. 操作元素的属性
+         */
+    </script>
+
+
+</head>
+<body>
+<button>显示当前系统时间</button>
+
+<div>某个时间</div>
+
+<p>这是P标签</p>
+
+<script>
+
+    // 1. 改变元素内容   innerText 他不识别html标签
+
+    //点击按钮 ，div之中改变
+
+    //获取元素
+    let btn = document.querySelector('button');
+    let div = document.querySelector('div');
+    //注册事件
+    btn.onclick = function () {
+        div.innerText = getDate();
+    }
+
+    var p = document.querySelector('p');
+
+    // innerText 他不识别html标签
+    p.innerText = getDate();
+
+    //html 识别 html标签
+    p.innerHTML = "<strong>今天是：</strong> 2022";
+
+    //读取这两个的属性， 可以获取元素的内容
+    console.log(p.innerText);  // 会去除空格和换行，以及html标签
+    console.log(p.innerHTML);   // 保留空格与换行 还有标签
+
+    //显示当前时间
+    function getDate() {
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth();
+        let day = date.getDay();
+        let datas = date.getDate();
+        let arr = ['星期1', '星期2', '星期3', '星期4', '星期5', '星期6', '星期7'];
+        return '今天是：' + year + '年' + month + '月' + day + '日' + arr[day];
+    }
+
+
+</script>
+
+
+</body>
+</html>

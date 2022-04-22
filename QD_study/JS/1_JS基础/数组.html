@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+
+<script>
+    'use strict'
+    /*
+     创建数组的方式
+     */
+
+    //  1 字面量
+    var arr = [];
+    var arr1 = [1, 2, 3, 4, 5, 6];
+
+    // 2 new  Array()
+    var arr2 = new Array();  //  new Array(2) ， 创建了数组 但是有两个空元素
+
+    arr2.unshift('first');
+    /*
+     在开头添加元素（会修改原数组），
+     返回新的长度.
+     arr2.unshift('first','second')， 里面可以有多个元素
+     */
+    arr2.push('zzcxz', 'adasdad');
+    /*
+     在末尾添加一个元素（会修改原数组）,
+     返回新的长度;
+     arr2.push('zzcxz','adasdad'); 里面可以有多个元素
+     */
+    arr2.shift(); // 删除第一个元素（会修改原数组），返回第一个元素的值
+    arr2.pop();     // 没有参数 。 删除最后一个元素（会修改原数组）,返回被删除的值
+    /*   arr1 也有相同的方法  */
+
+    console.log(arr2);
+
+    console.log('----------------------------------------------------------------')
+
+    var a1 = ['red', 'green', 'gray', 'red'];
+    /*
+    indexOf/lastIndexOf 返回数组下表（索引号） ，
+    只返回第一个满足条件的索引号  如果找不到元素 返回-1
+     */
+    console.log(a1.indexOf('red'));  // 返回 0
+    console.log(a1.indexOf('red', 3));  // 从下标为3的位置开始查找red
+    console.log(a1.lastIndexOf('red')); // 返回3 ， 他是从后往前查找
+
+</script>
+</html>

@@ -8,15 +8,23 @@
 </body>
 
 <script>
-
     var arr = ['a', 'b', ' ', 'ccc'];
-    var str = '*';
+    var str = '-'; // 分割的符号
     var st ='';
     for (var i = 0; i < arr.length; i++) {
         st = arr[i] + str + st;
     }
     console.log(arr)
     console.log(st)
+
+    var arr2 = ['a', 'b', 'c', 'd','e'];
+
+    //1. toString() 转换为字符串
+    console.log(arr2.toString());
+    //2. 用 join('分隔符')
+    console.log(arr2.join('-'));
+    console.log(arr2.join(''));
+    console.log(arr2.join('&'));
 
 </script>
 </html>

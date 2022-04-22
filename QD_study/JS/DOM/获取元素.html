@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script>
+        /*
+   获取元素
+  · ID      getElementById
+  · 标签     getElementsByTagName
+  · html5的方法通过类名/id名字  1. getElementsByClassName  2. 选择器 querySelector/querySelectorAll
+  · 元素  body/html /head  document.body / document.documentElement/ document.head
+*/
+    </script>
+</head>
+
+<body>
+
+    <div id="time">
+        2022-4-22
+    </div>
+
+    <script>
+        // 1. getElementById 返回的是一个对象
+        let timer = document.getElementById('time');
+        console.log(timer);
+        console.log(typeof timer);
+
+        //dir 打印返回的元素对象
+        console.dir(timer);
+    </script>
+
+    <ul>
+        <li>b</li>
+        <li>b</li>
+        <li>b</li>
+        <li>b</li>
+        <li>b</li>
+        <li>b</li>
+    </ul>
+
+    <ol id="z">
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ol>
+
+    <script>
+        /*   2.  getElementsByTagName 返回带有指定标签名对象的集合
+                返回获得元素对象的集合，存储在伪数组中
+                如果不存在这个元素，会返回一个空的伪数组
+         */
+        //获取ul之中的li
+        let lis = document.getElementsByTagName('li');
+        console.log(lis);
+        // 返回获得元素对象的集合，存储在伪数组中
+        console.log(lis[1]);
+
+        //获取ol之中的li
+        // var ol = document.getElementsByTagName('ol');
+        // console.log(ol[0].getElementsByTagName('li'));
+
+        //最好用id来获得
+        var ol = document.getElementById('z'); // 获取li的父元素
+        console.log(ol.getElementsByTagName('li'));
+    </script>
+
+    <div class="ul1">
+        <ul>
+            <li>首页</li>
+            <li>尾页</li>
+        </ul>
+    </div>
+
+    <div class="box">
+    </div>
+
+    <div class="box">
+    </div>
+
+    <div class="box">
+    </div>
+
+    <div id="id">
+    </div>
+
+    <script>
+        // 3. 通过类名
+        var cl = document.getElementsByClassName('ul1');
+        console.log(cl);
+        //只返回第一个
+        var cl1 = document.querySelector('.box');
+        console.log(cl1);
+
+        var cl2 = document.querySelector('#id');
+        console.log(cl2);
+        // 返回指定选择器所有
+        var allbox = document.querySelectorAll('.box');
+        console.log(allbox);
+    </script>
+
+    <script>
+        //获取body
+        let b1 = document.body;
+        console.log(b1);
+        //获取html
+        let h1 = document.documentElement;
+        console.log(h1);
+        //获取head
+        let h2 = document.head;
+        console.log(h2);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        // 操作(修改)： type value checked selected disabled
+    </script>
+</head>
+<body>
+
+<button>点击我一下</button>
+<input type="text" value="内容">
+<script>
+    let btn = document.querySelector('button');
+    let input = document.querySelector('input');
+    btn.onclick = function () {
+        // 修改input的value值
+        input.value = '点击了一下';
+        // 让表单被禁用
+        // btn.disabled = true;
+        // this.disabled = true; // this 指向当前函数的调用者.
+    }
+</script>
+
+
+</body>
+</html>

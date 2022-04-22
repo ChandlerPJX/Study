@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+
+<script>
+    var arr = [1, 1, 2, 2, 3, 3, 3, 5, 5, 55, 55, 4, 4, 4, 4, 4];
+
+    function unique(arr) {
+        var arrN = [];
+        for (var i = 0; i < arr.length; i++) {
+            // 利用indexof 进行去重
+            if (arrN.indexOf(arr[i]) === -1) {
+                arrN.push(arr[i]);
+            }
+        }
+        return arrN;
+    }
+
+    var a1 = unique(arr);
+    console.log(arr);
+    console.log(a1);
+
+</script>
+</html>

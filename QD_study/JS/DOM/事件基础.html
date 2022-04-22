@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<button id="btn">e</button>
+<script>
+    /*
+        1. 事件源 事件被触发的对象  谁  按钮
+        2. 事件类型 如何触发事件 比如 鼠标触发/键盘触发/
+        3. 事件处理程序  用函数赋值方式
+      */
+
+    /*  执行事件的步骤
+     1. 获取事件源
+     2. 注册事件（绑定）
+     3. 添加事件处理程序
+     */
+
+    // 1. 事件源  事件被触发的对象  谁  按钮
+    let btn = document.getElementById('btn');
+    // 2. 事件类型  如何触发事件 比如 鼠标触发/键盘触发/
+    // 3. 事件处理程序  用函数赋值方式
+    btn.onclick = function () {
+        alert('eeee');
+    }
+
+</script>
+
+<div>点击我</div>
+
+<script>
+    /*  执行事件的步骤
+     1. 获取事件源
+    2. 注册事件（绑定）
+    3. 添加事件处理程序
+    */
+    // 选择div 标签
+    let div = document.querySelector('div');
+    div.onclick = function (){
+        alert('选中');
+    }
+</script>
+
+</html>

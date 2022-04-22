@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            background: #8017c1;
+        }
+    </style>
+</head>
+<body>
+<div>
+</div>
+
+<script>
+    /*
+    element.style  行内
+    element.ClassName 类名
+
+     */
+
+
+    let div = document.querySelector("div");
+
+    div.onclick = function () {
+        this.style.backgroundColor = 'red';
+    }
+
+
+</script>
+</body>
+</html>

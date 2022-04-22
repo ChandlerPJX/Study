@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        img {
+            width: 300px;
+        }
+
+    </style>
+
+</head>
+<body>
+<img src="../image/1.png" alt="">
+
+<div>LF</div>
+<button id='lf'>还原</button>
+
+<script>
+    // 获取元素
+    let img = document.querySelector('img');
+    let div = document.querySelector('div');
+    let lf = document.getElementById('lf');
+
+    lf.onclick = function (){
+        img.src = "../image/1.png";
+        div.innerText = '路飞!';
+    }
+    //得到小时数字
+    let date = new Date();
+    let h = date.getHours();
+
+    if (h < 12) {
+        img.src = "../image/1.png";
+        div.innerText = '路飞!';
+    } else {
+        img.src = '../image/fj.png';
+        div.innerText = '看看风景';
+    }
+
+
+</script>
+</body>
+</html>

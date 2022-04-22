@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+    /*  几种基本类型都可
+
+     1 . 生成临时变量
+     2 . 赋值
+     3 . 销毁
+     */
+
+    // 1 . 生成临时变量
+    var temp = new String('adaszdasd');
+    // 2 . 赋值
+    var str = temp;
+    // 赋值后就可以调用他的一些方法
+    console.log(str.length);
+    console.log(str.charAt(3));
+    //返回字符位置
+    console.log(str.indexOf('z')); // 4
+    // 从索引号为3的位置 往后查找Z
+    console.log(str.indexOf('z',3));  // 4
+    console.log(str.lastIndexOf('z'));  //  从后面找
+    // 3 . 销毁
+    temp = null;
+</script>
+</html>

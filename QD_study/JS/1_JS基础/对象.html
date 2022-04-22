@@ -37,8 +37,10 @@
 
     //判断属性是否在对象之中
     console.log('haha' in a);   //true
+    console.log('=================================')
+    console.log(a['haha']);
 
-    //判断属性是否是对象自身拥有的hasOwnProperty
+    //判断属性是否是对象自身拥有的   hasOwnProperty
     a.hasOwnProperty('haha');
 
     //方法2.  var a = new Object();
@@ -69,6 +71,7 @@
     console.log(me);
     console.log(typeof me)
     console.log('---------------------------------')
+
 
     for (var k in me) {
         console.log(k);  // k变量输出的是属性名字

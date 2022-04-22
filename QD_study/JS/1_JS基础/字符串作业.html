@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+
+<script>
+
+    'use strict'
+    // 给定字符串 ’abaasdffggshujiohssss11231564‘
+
+    var sr = 'abaasdffggshujiohssss11231564';
+    //1.取长度
+    var len = sr.length;
+    // 2.取出指定位置的字符 0 4 8 9
+    console.log(sr.charAt(0));
+    console.log(sr.charAt(4));
+    console.log(sr.charAt(8));
+    console.log(sr.charAt(9));
+
+    // 3.查找指定字符存在  i ,c b
+    console.log(sr.indexOf('i'));
+    console.log(sr.indexOf('c'));
+    console.log(sr.indexOf('b'));
+
+    //4. 替换指定字符  a 替换为z
+    while (sr.indexOf(a) !== -1) {
+        sr = sr.replace('a', 'z');
+    }
+    console.log(sr);
+
+
+    //5. 截取指定开始位置到结束位置的字符 4 - 9
+    console.log(sr.slice(4, 9));
+
+    //6. 找出出现最多的字符
+    var a = {};
+    var max = 0;
+    let ch = '';
+    for (let i = 0; i < sr.length; i++) {
+        let ch = sr.charAt(i);
+        if (a[ch]) { //如果字符已经在a里面存在了.
+            a[ch]++;
+        } else {
+            a[ch] = 1;
+        }
+    }
+    for (let k in a) {
+        if (max < a[k]) {
+            max = a[k];
+            ch = k;
+        }
+    }
+    console.log(a);
+    console.log(ch);
+
+</script>
+</html>
