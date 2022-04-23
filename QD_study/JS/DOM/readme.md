@@ -27,7 +27,6 @@
 5. 节点操作
 
 
-
 常见鼠标事件：
         onclick  点击左键
         onmouseover 经过
@@ -37,4 +36,48 @@
         onmousemove 鼠标移动
         onmouseup   鼠标弹起
         onmousedown  鼠标按下
-            
+
+
+案例练习：
+
+        通过className修改样式属性
+        
+        循环精灵图
+        
+        密码框验证信息
+        
+        文本框显示/隐式
+        
+        排他思想
+        
+        百度换肤案例
+        
+        表格隔行变色
+        
+        全选与反选案例
+        
+        自定义属性
+        
+        tab栏 切换布局分析
+
+H5自定义属性：  
+    所有自定义属性都要用data-开头
+        e.setAttribute 设置自定义属性
+        e.getAttribute 获得自定义属性
+        h5新增的：   e.dataset.属性 和 e.dataset['index']    <---只能获取data开头的
+
+DOM 节点层次：
+    Node
+    Document
+    Element
+    Text
+    Comment
+    CDATASection  
+    DocumentType
+    DocumentFragment
+    Attr
+
+
+DOM 操作技术：
+
+

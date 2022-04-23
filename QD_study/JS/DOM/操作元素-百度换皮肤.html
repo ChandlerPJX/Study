@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        body {
+            background-size: 100%;
+            background: url("../image/2.jpg");
+        }
+
+        img {
+            width: 100px;
+            height: 50px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<ul class="hzw">
+    <li><img src="../image/2.jpg" alt=""></li>
+    <li><img src="../image/3.jpg" alt=""></li>
+    <li><img src="../image/4.jpg" alt=""></li>
+    <li><img src="../image/5.jpg" alt=""></li>
+    <li><img src="../image/6.jpg" alt=""></li>
+</ul>
+
+<script>
+    var img = document.querySelector('.hzw').querySelectorAll('img');
+
+
+    for (var i = 0; i < img.length; i++) {
+        img[i].onclick = function () {
+            console.log(this.src);
+            document.body.style.backgroundImage = 'url('+ this.src +')';
+        }
+    }
+
+
+</script>
+</body>
+</html>

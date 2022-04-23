@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        .tab {
+            width: 500px;
+            margin: 100px auto;
+
+        }
+
+        .d1 li {
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            list-style: none;
+            text-align: center;
+            cursor: pointer; /* 变成可以点击的 */
+            padding: 0 20px;
+        }
+
+        .d1 .A {
+            background-color: red;
+            color: whitesmoke;
+        }
+
+        .d2 {
+            width: 50px;
+            height: 400px;
+        }
+
+        .dd1{
+            display: none;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<div class="tab">
+    <div class="d1">
+        <ul>
+            <li class="A" >A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+    </div>
+    <div class="d2">
+        <div class="dd1"  style="display: block">
+            a
+        </div>
+        <div class="dd1">
+            b
+        </div>
+        <div class="dd1">
+            c
+        </div>
+        <div class="dd1">
+            d
+        </div>
+        <div class="dd1">
+            e
+        </div>
+    </div>
+</div>
+<script>
+    var div1 = document.querySelector('.d1');
+    var lis = document.querySelectorAll('li');
+    var div2 = document.querySelectorAll('.dd1');
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].setAttribute('index',i);
+        lis[i].onclick = function () {
+            for (var j = 0; j < lis.length; j++) {
+                lis[j].className = '';
+            }
+            this.className = 'A';
+            // 显示内容
+            var index =  this.getAttribute('index');
+            for(var j = 0; j < div2.length;j++){
+                div2[j].style.display = 'none';
+            }
+            div2[index].style.display = 'block';
+
+        }
+    }
+</script>
+
+</body>
+</html>

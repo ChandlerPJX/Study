@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>模仿</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 250px;
+            margin: 100px auto;
+        }
+
+        .box li {
+            width: 24px;
+            height: 24px;
+            margin: 15px;
+            background-color: red;
+            float: left;
+            list-style: none;
+            background: url('../image/jl.png') no-repeat;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="dbox">
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        let li = document.querySelectorAll('li');
+        for (let i = 0; i < li.length; i++) {
+            let index = i * 24;
+            li[i].style.backgroundPosition = '-' + index + 'px 0px';
+        }
+
+
+    </script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排他</title>
+</head>
+<body>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+
+<script>
+    //1 获取所有按钮元素
+    var btn = document.querySelectorAll('button');
+
+    for (var i = 0; i < btn.length; i++) {
+        // 排它思想， 先去掉所有人的效果，然后加入自己的效果
+        btn[i].onclick = function () {
+            // 去除所有的背景颜色
+            for (var j = 0; j < btn.length; j++) {
+                btn[j].style.backgroundColor = '';
+            }
+            //把当前元素添加背景元素
+            this.style.background = 'pink';
+        }
+    }
+
+
+</script>
+</body>
+</html>

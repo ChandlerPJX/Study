@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        table {
+            width: 800px;
+            text-align: center;
+            border-collapse: collapse;
+            margin: 100px auto;
+            font-size: 14px;
+        }
+
+        thead tr {
+            height: 30px;
+            background-color: #0bdfc3;
+            color: #1871e3;
+        }
+
+        tbody tr {
+            height: 30px;
+        }
+
+        tbody td {
+            border-bottom: 2px solid darkmagenta;
+            color: #1871e3;
+        }
+
+        .bg {
+            background-color: #e07878;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <td>编号</td>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>0012</td>
+            <td>hello</td>
+            <td>aaaa</td>
+            <td>bbbb</td>
+            <td>cccc</td>
+            <td>dddd</td>
+        </tr>
+        <tr>
+            <td>0024</td>
+            <td>sad</td>
+            <td>yoyoyo1</td>
+            <td>yoyoyo2</td>
+            <td>yoyoyo3</td>
+            <td>yoyoyo4</td>
+        </tr>
+        <tr>
+            <td>0031</td>
+            <td>blue</td>
+            <td>ai</td>
+            <td>b1</td>
+            <td>c1</td>
+            <td>ai</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+
+    var trs = document.querySelector('tbody').querySelectorAll('tr');
+
+    for (var i = 0; i < trs.length; i++) {
+
+        // 经过事件
+        trs[i].onmouseover = function () {
+            this.className = 'bg';
+        }
+        // 离开事件
+        trs[i].onmouseout = function () {
+            this.className = '';
+        }
+    }
+
+</script>
+</body>
+</html>

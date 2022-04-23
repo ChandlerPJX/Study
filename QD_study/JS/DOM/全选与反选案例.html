@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 500px;
+            text-align: center;
+            border-collapse: collapse;
+            margin: 100px auto;
+            font-size: 14px;
+            background-color: grey;
+        }
+
+        thead tr {
+            height: 30px;
+            background-color: #0bdfc3;
+            color: #d24848;
+        }
+
+        tbody td {
+            height: 30px;
+            background-color: #ffdcf8;
+            color: #1871e3;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th><input type="checkbox" id="t1"/></th>
+            <th>商品</th>
+            <th>价格</th>
+        </tr>
+        </thead>
+        <tbody id="tb">
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>iphone 7</td>
+            <td>2500</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td>iphone x Max</td>
+            <td>6500</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>iphone 8</td>
+            <td>3000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>iphone 13</td>
+            <td>5500</td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+
+</div>
+
+<script>
+
+    var t1 = document.getElementById('t1'); //全选按钮
+    var tbs = document.getElementById('tb').getElementsByTagName('input');
+
+    t1.onclick = function () {
+        for (var i = 0; i < tbs.length; i++) {
+            if (this.checked == true) {
+                tbs[i].checked = this.checked;
+            } else {
+                tbs[i].checked = this.checked;
+            }
+        }
+    }
+
+    for (var j = 0; j < tbs.length; j++) {
+        tbs[j].onclick = function () {
+            var flag = true;
+            for (var z = 0; z < tbs.length; z++) {
+                if (!tbs[z].checked) {
+                    flag = false;
+                    break;
+                }
+            }
+            t1.checked = flag;
+            console.log(t1.checked);
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

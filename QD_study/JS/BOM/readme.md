@@ -27,8 +27,6 @@ BOM ： 浏览器对象模型
          定位与重定位
          location.assign("url")  跳转
             ...
-
-·   document ： 代表当前页面
    
 
 ·  history : 浏览器的历史信息
