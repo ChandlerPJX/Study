@@ -60,7 +60,7 @@
         
         tab栏 切换布局分析
 
-H5自定义属性：  
+H5自定义属性（以data开头）：  
     所有自定义属性都要用data-开头
         e.setAttribute 设置自定义属性
         e.getAttribute 获得自定义属性
@@ -77,7 +77,34 @@ DOM 节点层次：
     DocumentFragment
     Attr
 
-
 DOM 操作技术：
 
+节点操作：
+        父节点： parentNode 
+        子节点： childNodes 
+
+        取节点
+        创建节点/添加节点   :三种创建的区别。
+        删除节点
+        复制节点
+        
+练习案例： 
+
+        下拉菜单
+
+        发布/删除留言
+
+        动态生成表格
+        
+事件：
+
+注册事件（绑定事件）：
+
+        传统方式： 利用on开头。 如 onclick  。  特点有唯一性，一个元素只能设置一个处理函数。
+        方法监听:  addEventListener()    推荐使用
+删除事件（解绑事件）
+事件流程
+        捕获阶段   document -> html -> body -> div
+        当前目标阶段
+        冒泡阶段   div -> body -> html -> document
 

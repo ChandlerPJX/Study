@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="d1">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+
+    <div class="d2">
+        <span class="sp">x</span>
+    </div>
+    <script>
+        //  父节点： parentNode  如 d2 sp 的父节点, 得到的是距离元素最近的节点（亲爹）
+        var sp = document.querySelector('.sp');
+        console.log(sp.parentNode);
+
+        // 子节点： childNodes 获取所有的子节点，包括元素节点，文本节点等
+        var ul = document.querySelector('ul');
+        console.log(ul.childNodes);
+
+        // 只获取元素节点
+        for (var i = 0; i < ul.childNodes.length; i++) {
+            //如果是元素节点（元素节点为1） <-- 麻烦
+            if (ul.childNodes[i].nodeType == 1) {
+                console.log(ul.childNodes[i]);
+            }
+        }
+
+        // 建议用 children  <---开发常用
+        console.log(ul.children);
+
+        // 获取第一个子节点， 无论文本 or 元素
+        console.log(ul.firstChild);
+         // 获取最后一个子节点， 无论文本 or 元素
+        console.log(ul.lastChild);
+
+        // 获取第一个元素节点
+        console.log(ul.firstElementChild);
+
+        // 获取最后一个元素节点
+        console.log(ul.lastElementChild);
+
+        // 开发中建议方法：
+        console.log(ul.children[0]);   //第1个
+        console.log(ul.children[3]);   //第4个
+        console.log(ul.children[ul.children.length-1]);   //最后一个
+
+    </script>
+</body>
+
+</html>

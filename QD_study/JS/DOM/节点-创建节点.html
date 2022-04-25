@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>123</li>
+</ul>
+
+
+<script>
+
+    //创建节点
+   var li =  document.createElement('li');
+    //添加节点
+    var ul = document.querySelector('ul');
+    ul.appendChild(li);  // 添加在当前节点之后
+    ul.insertBefore(li,ul.children[0]); // 添加在之前
+    console.log(ul);
+</script>
+</body>
+</html>

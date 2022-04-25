@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+        传统方式： 利用on开头。 如 onclick  。  特点有唯一性，一个元素只能设置一个处理函数。
+        方法监听:  addEventListener()    推荐使用
+-->
+
+<button>1</button>
+<button>2</button>
+<script>
+    //传统 具有唯一性
+    var btns = document.querySelectorAll('button');
+    btns[0].onclick = function () {
+        alert(11);
+    }
+    btns[0].onclick = function () {
+        alert(22);
+    }
+
+    // 事件监听 addEventListener
+    btns[1].addEventListener('click', function () {
+        alert(22);
+    })
+    btns[1].addEventListener('click', function () {
+        alert(33);
+    })
+
+</script>
+
+<div>123</div>
+<!-- 事件对象 -->
+<script>
+    var div = document.querySelector('div');
+    /*
+    1. event 就是一个事件对象，写在监听函数里(类比形参)
+    2. 事件对象只有有了事件才会出现，是系统自动创建的，无需我们传入参数
+    3. 事件对象是我们事件的一系列相关数据的集合与事件相关的如： 鼠标点击、鼠标移动等
+    4. 事件对象我们可以自己命名， 不一定要用event  常用 e
+    */
+    div.onclick = function(event){
+        console.log(event);
+    }
+</script>
+
+<!--事件对象常用的属性-->
+
+<div class="d2">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</div>
+
+<script>
+    /*
+    1 .target
+     */
+    var d2 = document.querySelector('.d2');
+    d2.addEventListener('click',function (e){
+        // target 返回触发元素的对象
+        console.log(e.target);
+        //this 返回绑定元素的对象
+        console.log(this);
+    })
+
+    var ul =
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

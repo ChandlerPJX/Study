@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        textarea {
+            border-color: #f5aec4;
+            border-radius: 1px;
+        }
+
+        ul {
+            margin-top: 50px;
+        }
+
+        ul li {
+            width: 300px;
+            padding: 5px;
+            margin: 15px 0;
+            background-color: #f5aec4;
+            color: white;
+            left: 0;
+        }
+
+        li a {
+            float: right;
+        }
+
+        li a:hover {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+<textarea name="" id=""></textarea>
+<br>
+<button>发布</button>
+
+
+<ul>
+    <li>123</li>
+</ul>
+<script>
+
+    var btn = document.querySelector('button');
+    var text = document.querySelector('textarea');
+    var ul = document.querySelector('ul');
+
+    btn.onclick = function () {
+        if (text.value != '') {
+            var li = document.createElement('li');
+            li.innerHTML = text.value + "<a href='javascript:;'> 删除 </a>";   // javascript:;表示链接不用跳转
+            console.log(text.value);
+            ul.appendChild(li);
+
+            // 删除链接
+
+            var as = document.querySelectorAll('a');
+            for (var i = 0; i < as.length; i++) {
+                as[i].onclick = function () {
+                    ul.removeChild(this.parentNode);
+
+                }
+            }
+
+
+        } else {
+            alert('没有输入');
+            return false;
+        }
+    }
+
+</script>
+
+</body>
+</html>

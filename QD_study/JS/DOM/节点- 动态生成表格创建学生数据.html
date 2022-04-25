@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        table {
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th> A </th>
+                <th> B </th>
+                <th> C </th>
+                <th> D </th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        var datas = [
+            {
+                A: 'a',
+                B: 'b',
+                C: 'c',
+                D: 'd'
+            },
+            {
+                A: 'a',
+                B: 'b',
+                C: 'c',
+                D: 'd'
+            },
+            {
+                A: 'a',
+                B: 'b',
+                C: 'c',
+                D: 'd'
+            },
+            {
+                A: 'a',
+                B: 'b',
+                C: 'c',
+                D: 'd'
+            }
+        ];
+
+        var tb = document.querySelector('tbody');
+        for (var i = 0; i < datas.length; i++) {
+            //创建行 tr
+            var tr = document.createElement('tr');
+            tb.appendChild(tr);
+            // 创建单元格td
+            for (var k in datas[i]) {
+                // k 属性名字， k【i】属性值
+                var td = document.createElement('td');
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
