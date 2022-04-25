@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        img{
+            width: 30px;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+<img src="../image/1.png" alt="">
+
+<script>
+    var img = document.querySelector('img')
+    document.addEventListener('mousemove',function(e){
+        //获得鼠标的x，y坐标
+        var x = e.pageX - 14  + 'px';
+        var y = e.pageY - 15 + 'px'; 
+        console.log('x is : ' + x, 'y is : ' + y);
+        img.style.left = x;
+        img.style.top = y;
+    })
+</script>
+</body>
+</html>
