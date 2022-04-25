@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button>1</button>
+<script>
+    // // 传统方法
+    // window.onload = function () {
+    //     var btn = document.querySelector('button');
+    //     btn.addEventListener('click',function (){
+    //         alert(11);
+    //     })
+    // }
+    //
+    //推荐方法
+    window.addEventListener('load',function (){
+        var btn = document.querySelector('button');
+
+        btn.addEventListener('click',function (){
+            alert(220);
+        })
+
+    })
+</script>
+</body>
+</html>
