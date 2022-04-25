@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        li {
+            width: 300px;
+            height: 30px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+    </ul>
+
+
+    <script>
+        // 委托核心： 给父节点添加监听器，利用冒泡影响每一个节点。
+         var ul = document.querySelector('ul');
+         ul.addEventListener('click',function(e){
+             alert('click');
+             // e.target 获得点击的对象
+             e.target.style.background = 'pink';
+         })
+    </script>
+</body>
+
+</html>

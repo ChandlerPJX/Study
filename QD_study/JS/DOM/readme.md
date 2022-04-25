@@ -95,16 +95,6 @@ DOM 操作技术：
         发布/删除留言
 
         动态生成表格
-        
-事件：
-
-注册事件（绑定事件）：
-
-        传统方式： 利用on开头。 如 onclick  。  特点有唯一性，一个元素只能设置一个处理函数。
-        方法监听:  addEventListener()    推荐使用
-删除事件（解绑事件）
-事件流程
-        捕获阶段   document -> html -> body -> div
-        当前目标阶段
-        冒泡阶段   div -> body -> html -> document
-
+  
+=
+    
