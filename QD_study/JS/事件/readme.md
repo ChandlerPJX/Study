@@ -36,4 +36,9 @@
         e.pageY         返回鼠标相当于与文档页面的Y坐标
         e.screenX       返回鼠标相当于与电脑屏幕的X坐标
         e.screenY       返回鼠标相当于与电脑屏幕的Y坐标
+常用的键盘事件：
+
+        onkeyup         某个键盘按键被松开时
+        ondkeydown      某个键盘按键被按下时
+        onkeypress      某个键盘按键被按下时  它不识别功能键， ctrl shift
     

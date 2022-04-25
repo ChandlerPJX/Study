@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+
+
+      // 用addEventListener 不用加上on
+
+      //执行顺序  down --- press -- up
+    document.addEventListener('keyup',function (){
+        console.log('keyup')
+    })
+
+    document.addEventListener('keydown',function (){
+        console.log('keydown')
+    })
+    document.addEventListener('keypress',function (){
+        console.log('keypress')
+    })
+
+
+
+
+  </script>
+</body>
+</html>
