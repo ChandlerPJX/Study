@@ -17,9 +17,12 @@
             html-webpack-plugin 通过插件自定义index.html内容
                     
         webpack中的loader  协助打包处理特定的文件模块
-            css.loader  打包处理css
-            less.loader 打包处理less
-            babel.loader 打包处理webpack无法处理的JS语法
+                css-loader    打包处理css
+                less          less-loaer的依赖
+                less-loader   打包处理less
+                style-loader    打包处理style
+                url-loader      打包处理 url
+                file-loader     打包处理file
             
 
 

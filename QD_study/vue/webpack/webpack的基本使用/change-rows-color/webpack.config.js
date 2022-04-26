@@ -26,14 +26,39 @@ module.exports = {
     // 配置文件的插件
     plugins: [htmlPlugin],
 
-
-    //
     devServer: {
         open: true,  // 初次完成更改自动打开浏览器
         // host: '127.0.0.1',// 主机地址
         // port: 80    //端口号
 
-    }
+    },
+
+    //添加匹配规则
+    // 文件后缀名匹配规则  从后往前调用
+    module: {
+        rules: [
+            {
+                test: /\.less$/,
+                use: ['style-loader',
+                    'css-loader',
+                    'less-loader']
+            },
+
+            {
+                test: /\.css$/,
+                use:
+                    ['style-loader',
+                        'css-loader',
+                    ]
+            },
+            {
+                test: /\.jpg|png|gif$/,
+                use:'url-loader'
+            }
+        ]
+    },
+
+
 }
 
 
