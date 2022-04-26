@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   
+    <button>click</button>
+<script>
+
+    /*
+    history.back()    后退功能
+    history.forward() 前进功能
+    history.go(参数)  前进后退功能， 参数为1 表示前进一个页面。 参数为-1 表示后退一个页面
+     */
+
+     var btn = document.querySelector('button');
+     btn.addEventListener('click',function(){
+         history.go(-1);
+     })
+
+</script>
+</body>
+</html>

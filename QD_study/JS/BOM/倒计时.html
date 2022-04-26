@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 40px;
+            background-color: aqua;
+        }
+
+        span {
+            color: white;
+            margin: 2px;
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <span class="hour"> 1 </span>
+    <span class="minute"> 2 </span>
+    <span class="second"> 3 </span>
+</div>
+<div>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+</div>
+<script>
+    var hour = document.querySelector('.hour');
+    var minute = document.querySelector('.minute');
+    var second = document.querySelector('.second');
+    var inputTime = +new Date('2022-4-25-8:00:00');
+    var timer = null;
+//     countDown();
+//     // 开启定时器
+//     setInterval(countDown, 1000);
+    function countDown() {
+        let nowTime = +new Date();
+        let times = (nowTime - inputTime) / 1000;
+        // let d = parseInt(times / 60 / 60 / 24);
+        // d = d < 10 ? '0' + d : d;
+        let h = parseInt(times / 60 / 60 % 24);
+        h = h < 10 ? h : h;
+        hour.innerHTML = h;
+        let m = parseInt(times / 60 % 60);
+        m = m < 10 ? m : m;
+        minute.innerHTML = m;
+        let s = parseInt(times % 60);
+        s = s < 10 ? s : s;
+        second.innerHTML = s;
+    }
+    var start = document.querySelector('.start');
+    var stop = document.querySelector('.stop');
+     start.addEventListener('click',function (){
+         console.log('start');
+         timer = setInterval(countDown,1000); // 开启计时器
+     })
+
+    stop.addEventListener('click',function (){
+        console.log('stop');
+        clearInterval(timer);  // 停止计时器
+    })
+</script>
+</body>
+
+</html>

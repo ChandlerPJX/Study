@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<script>
+    /*
+        setTimeout()   只调用一次  他是属于window对象，但是用的时候window可以省略
+        使用计时器时，经常加上标识符
+        他也会被计为回调函数
+    */
+    setTimeout(function () {  // 单位毫秒，这里2000可以省略 默认是0
+        console.log('1');
+    }, 2000)
+
+    /*
+      setInterval  反复调用一个函数， window 可以省略
+     */
+    setInterval(function () {
+        console.log('1')
+    }, 3000);
+
+</script>
+</body>
+
+</html>

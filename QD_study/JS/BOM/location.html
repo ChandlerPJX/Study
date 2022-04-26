@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>跳转</button>
+</body>
+
+<script>
+    /*
+     location.hash      获取主机(域名)
+     location.href      获取整个URL
+     location.port      获取端口号
+     location.pathname  获取路径
+     location.search    获取参数
+     location.hash      获取片段（如 锚点，链接）
+     */
+    /*
+     location中的方法
+    location.assign()  跳转页面
+    location.replace() 替换当前页面 （不记录历史，所以不能回退）
+    location.reload()   重新加载，刷新页面
+     */
+
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function (){
+        location.assign('https://www.baidu.com/'); // 跳转到百度
+    })
+
+
+</script>
+</html>
