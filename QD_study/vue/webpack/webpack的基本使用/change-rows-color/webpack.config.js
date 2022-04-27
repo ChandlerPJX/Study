@@ -11,16 +11,27 @@ const htmlPlugin = new HtmlPlugin({
 
 
 module.exports = {
+
+
     // mode 代表webpack的运行模式，可选值为 development(开发的时候用) 和 production（上线的时候用）
     mode: 'development',
 
-    // 在webpack.config.js 中可以通过 entry节点，指定打包的入口。通过 output节点指定打包的出口。
+    performance: {
+        hints: 'warning', // 枚举 false关闭
+        maxEntrypointSize: 100000000, // 最大入口文件大小
+        maxAssetSize: 100000000, // 最大资源文件大小
+        assetFilter: function (assetFilename) { //只给出js文件的性能提示
+            return assetFilename.endsWith('.js');
+        }
+    },
 
-    entry: path.join(__dirname, './src/index1.js'), // 打包入口文件的路径 __dirname表示当前文件所处的目录
+    // 在webpack.config.js 中可以通过 entry节点，指定打包的入口。通过 output节点指定打包的出口。
+    // 打包入口文件的路径 __dirname表示当前文件所处的目录
+    entry: path.join(__dirname, './src/index1.js'),
 
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js' //输出文件的路径
+        filename: 'js/bundle.js' //输出文件的路径
     },
 
     // 配置文件的插件
@@ -53,7 +64,12 @@ module.exports = {
             },
             {
                 test: /\.jpg|png|gif$/,
-                use:'url-loader'
+                use: 'url-loader'
+                //url-loader?limit =470 这里的limit 是限制图片转换的大小。如果小于470 就会被转换为base64。
+            },
+            {
+                // 注意： 必须使用exclude 指定排除项； 因为node_modules 目录下的第三方不需要被打包
+                test: /\.js$/, use: 'babel-loader', exclude: /node_modules/
             }
         ]
     },

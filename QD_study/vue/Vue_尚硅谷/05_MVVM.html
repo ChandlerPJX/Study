@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="root">
+<!--    view-->
+    <h1>School: {{name}}</h1>
+    <h1>Saddress: {{address}}</h1>
+
+</div>
+
+<script>
+    Vue.config.productionTip =false;
+
+    // VM
+    new Vue({
+        el:'#root',
+        // model
+        data:{
+            name:'zzz',
+            address:'aaa'
+        }
+    })
+
+</script>
+</body>
+</html>

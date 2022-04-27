@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--数据代理：通过一个对象代理对另一个对象中的属性操作（读/写）-->
+
+<script>
+
+    //通过o2 ，修改o1
+    let o1 = {x: 100};
+    let o2 = {y: 200};
+
+    Object.defineProperty(o2,'x',{
+        get(){
+            return o1.x;
+        },
+        set(value){
+            o1.x = value;
+        }
+    })
+
+
+</script>
+</body>
+</html>

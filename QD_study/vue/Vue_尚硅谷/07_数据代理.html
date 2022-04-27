@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Person = {
+        name: 'Chandler',
+        sex: 'man'
+    }
+
+    let number = 18;
+    //添加属性 注意： 这种方式添加的是不参与遍历的，即不可枚举; 而且值不能修改; 不能被删除
+    Object.defineProperty(Person, 'age', {
+        // value: 18,
+        // enumerable: true,// 控制属性是否可枚举  默认是false
+        // writable: true,  // 控制属性是否可以修改 默认是false
+        // configurable: true,// 控制属性是否可以被删除 默认是false
+
+        // 当有人访问age属性，会调用get函数（getter），切返回age的值
+        get: function () {
+            console.log('有人读取');
+            return number;
+        },
+
+        set(value) {
+            console.log('有人修改');
+            number = value;
+        }
+
+
+    })
+    // age 没有被遍历
+    for (var k in Person) {
+        console.log(k + " :" + Person[k])
+    }
+    console.log(Person);
+
+
+</script>
+</body>
+</html>

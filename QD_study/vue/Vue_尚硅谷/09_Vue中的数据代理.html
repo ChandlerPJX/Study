@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="root">
+    <h1>school: {{name}}</h1>
+    <h1>address: {{address}}</h1>
+</div>
+<script>
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            name: 'CHANDLER',
+            address: 'home'
+        }
+    })
+</script>
+</body>
+</html>

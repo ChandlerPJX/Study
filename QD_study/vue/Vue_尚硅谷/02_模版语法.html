@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+<!-- 准备一个容器 -->
+<div id="root">
+    <h1>插入语法</h1>
+    <!-- 一般用于标签体
+        1. 用于解析标签内容.
+        写法:{{xxx}} , xxx为js表达式,由data中的属性读到. 
+    -->
+    <h3>hi {{name}}</h3>
+    <hr/>
+    <h1>指令语法</h1>
+    <!-- 一般用于标签属性之中 
+    1. 用于解析标签(标签属性,标签内容...) 如 v-bind:href=“xxxx”, xxx为js表达式,由data的属性读到.
+        指令语法有很多. 
+        格式: v-xxxx
+    -->
+    <a v-bind:href="school.url">click {{school.name}}</a>
+    <a href="https://cn.vuejs.org/v2/guide/">click {{school.name}}</a>
+</div>
+</body>
+<script>
+    Vue.config.productionTip = false;
+    new Vue({
+        el:'#root',
+        data:{
+            name:'Chandler',
+            school:{ // 解决name的冲突,分级书写.
+                name: "PJXs",
+                url:'https://cn.vuejs.org/v2/guide/' // 使用:(v-bind的简写)进行绑定
+            }
+        }
+    })
+</script>
+
+</html>

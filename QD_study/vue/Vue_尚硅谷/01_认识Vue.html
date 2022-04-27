@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--  js 导入vue -->
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+
+<body>
+<!--准备好一个容器 -->
+<div class="root">
+    <h1>hello {{name}}</h1>
+</div>
+<div class="root">
+    <h1>hello {{name}}</h1>
+</div>
+<script>
+    /*
+     1. 使用vue 要创建一个vue实例对象，且要传入配置对象。
+     2. root 容器里的代码依然符合html规范，只是混入了vue语法。
+     3. root容器里的代码被称为【vue模版】
+     4. 容器和vue实例对象是一一对应的.
+     */
+
+    Vue.config.productionTip = false; // 阻止 vue 在启动的时候生成生产提示
+
+    // 创建 vue 实例
+    new Vue({
+        el: '.root', //用于指定当前Vue为哪个容器服务。 通常为css选择器字符.
+        data: { // data 中存储数据，供el指定的对象所使用
+            name: 'Chandler'
+        }
+
+    });
+
+</script>
+</body>
+
+</html>

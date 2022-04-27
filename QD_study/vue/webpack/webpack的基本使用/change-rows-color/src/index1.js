@@ -12,8 +12,8 @@ import $ from 'jquery'
 // 2.  定义jq的入口函数
 $(function () {
     // 3  实现奇偶变色
-    $('li:odd').css('background-color', '#5bde5c');  //奇数行
-    $('li:even').css('background-color', '#448ec9'); // 偶数行
+    $('li:odd').css('background-color', '#2c572e');  //奇数行
+    $('li:even').css('background-color', '#0f8cee'); // 偶数行
 })
 
 
@@ -27,3 +27,19 @@ import './css/index.less'
 import lf from '../images/1.png'
 // 2. 给img 标签src动态赋值
 $('.box').attr('src',lf)
+
+
+
+// 装饰器 函数
+function info(target){
+
+    target.info = 'Person info.'
+}
+//定义一个类
+
+@info
+class Person{
+
+}
+
+console.log(Person.info)
