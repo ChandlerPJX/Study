@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="lib/vue.js"></script>
+
+
+<div id="app">
+    <p> count: {{ count }}</p>
+    <!--  count 奇偶数  背景颜色变-->
+<!-- vue 提供了内置变量 $event 他是原生的DOM的事件对象   -->
+    <button @click="add(1,$event)">+N</button>
+
+</div>
+
+<script>
+
+    Vue.config.productionTip = false;
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            count: 3
+        },
+        methods: {
+            // 如果绑定事件的时候没有传参数，默认绑定e。（e.target 为触发事件的对象）
+            add(n,e) {
+                this.count += n;
+                console.log(e);
+
+                if (this.count % 2 === 0) {
+                    e.target.style.backgroundColor = 'red';
+                }else {
+                    e.target.style.backgroundColor = 'green';
+                }
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

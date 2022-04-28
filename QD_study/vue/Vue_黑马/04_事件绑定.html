@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p> count : {{ count }}</p>
+    <button v-on:click="add">+1</button>
+    <button v-on:click="sub(2)">-1</button>
+</div>
+<script src="lib/vue.js"></script>
+
+<script>
+    Vue.config.productionTip = false;
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            count: 0,
+        },
+
+        // 定义事件的处理函数
+        methods: {
+            add() {
+                console.log('+1');
+                this.count++;
+            },
+            // 绑定事件的时候可以用（）传递参数.
+            sub(n){
+                console.log('-1');
+                this.count -= 2;
+            }
+
+        }
+    })
+
+</script>
+</body>
+</html>

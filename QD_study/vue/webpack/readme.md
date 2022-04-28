@@ -30,6 +30,10 @@
  
         
 发布配置命令：bulid（发布阶段用）
+
+自动清理dist下的 旧文件。 
+
+    clean-webpack-plugin
     
 
 

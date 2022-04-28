@@ -3,6 +3,9 @@
 const HtmlPlugin = require('html-webpack-plugin') // 导入html 插件
 const path = require('path')  // 导入node.js的专门操作目录的模块
 
+// 自动清理 dist 旧文件
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 const htmlPlugin = new HtmlPlugin({
     template: './src/index.html', //指定原文件存放位置
@@ -12,6 +15,10 @@ const htmlPlugin = new HtmlPlugin({
 
 module.exports = {
 
+    // 开发调试阶段建议配置为；eval-source-map . 配置source,保证运行时报错行与源代码相同
+    // 发布的时候在去掉devtool,提高安全性（不报漏源码）.
+    // 如果只想定位行数，不暴漏源码，建议用：nosources-source-map
+    devtool:'eval-source-map',
 
     // mode 代表webpack的运行模式，可选值为 development(开发的时候用) 和 production（上线的时候用）
     mode: 'development',
@@ -19,10 +26,7 @@ module.exports = {
     performance: {
         hints: 'warning', // 枚举 false关闭
         maxEntrypointSize: 100000000, // 最大入口文件大小
-        maxAssetSize: 100000000, // 最大资源文件大小
-        assetFilter: function (assetFilename) { //只给出js文件的性能提示
-            return assetFilename.endsWith('.js');
-        }
+        maxAssetSize: 100000000
     },
 
     // 在webpack.config.js 中可以通过 entry节点，指定打包的入口。通过 output节点指定打包的出口。
@@ -35,7 +39,7 @@ module.exports = {
     },
 
     // 配置文件的插件
-    plugins: [htmlPlugin],
+    plugins: [htmlPlugin,  new CleanWebpackPlugin()],
 
     devServer: {
         open: true,  // 初次完成更改自动打开浏览器
@@ -73,6 +77,12 @@ module.exports = {
             }
         ]
     },
+
+    resolve:{
+        alias:{
+            '@': path.join(__dirname,'/src/')
+        }
+    }
 
 
 }

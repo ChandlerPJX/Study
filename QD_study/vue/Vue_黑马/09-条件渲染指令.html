@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <button>Tools Flag</button>
+        <!-- 
+              v-show: 动态为元素添加或移除 display:none 样式 . 频繁切换元素显示状态,用show
+              v-if:   动态删除或创建元素.  某些元素不需要被展示,后期也不太需要使用,用if
+         -->
+        <p v-if="flag"> v-if : </p>
+        <p v-show="flag">v-show: </p>
+˙
+    </div>
+
+    <!--导入vue-->
+    <script src="./lib/vue.js"></script>
+
+    <script>
+        Vue.config.productionTip = false;
+
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                flag: false,
+            }
+        })
+
+    </script>
+</body>
+
+</html>

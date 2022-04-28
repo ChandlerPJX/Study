@@ -2,5 +2,22 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day3/code/demo-first" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day4/code/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day4/资料/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day4/资料/demo-cart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day5/code/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day5/code/demo-cart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day5/资料/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day5/资料/demo-cart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day6/code/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day6/code/demo-3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day6/code/demo-cart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day6/资料/demo-1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day6/资料/demo-cart" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day7/code/router-demo1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day7/资料/router-demo1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day8/code/demo-toutiao" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Vue_黑马/day8/资料/demo-article" vcs="Git" />
   </component>
 </project>

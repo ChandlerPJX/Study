@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+<!-- v-text 会覆盖元素原有内容  -->
+  <p v-text="username"></p>
+  <p v-text="sex">sex</p>
+  <hr>
+  <!--  {{}} 插值表达式-->
+  <p>name:{{ username }}</p>
+  <p>sex: {{ sex }}</p>
+  <p>sex的反转结果是:{{sex.split('').reverse().join('')}}</p>
+  <p>1+2 = {{1 + 2}}</p>
+</div>
+<hr>
+<div v-html="info"></div>
+<h4 style="color:red">快来</h4>
+
+
+
+
+<!--导入vue-->
+<script src="./lib/vue.js"></script>
+
+<script>
+  const vm = new Vue({
+    el:'#app',
+    data:{
+      username:'PDD',
+      sex:'man',
+      info:'<h4 style="color:red">快来</h4>'
+    }
+  })
+
+</script>
+</body>
+</html>

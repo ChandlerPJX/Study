@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">{{ username }}</div>
+
+<!--导入vue-->
+<script src="./lib/vue.js"></script>
+
+<script>
+    const vm = new Vue({
+        el:'#app',
+        data:{
+            username:'PDD'
+        }
+    })
+
+</script>
+</body>
+</html>
