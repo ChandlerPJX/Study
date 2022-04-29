@@ -68,7 +68,7 @@
             </div>
           </td>
 
-          <td>{{ item.time }}</td>
+          <td>{{ time | dateFormat}}</td>
           <td>
             <a href="javascript:;" @click="remove(item.id)">删除</a>
           </td>
@@ -77,9 +77,19 @@
     </table>
   </div>
 
-
-  <script src="./lib/vue-2.6.12.js"></script>
+  <script src="lib/vue.js"></script>
+  <script src="lib/dayjs.min.js"></script>
   <script>
+
+    Vue.config.productionTip = false
+
+
+    // // 格式化日期
+    // Vue.filter('dateFormat', function (time) {
+    //   const year = dayjs(time).format('YYYY-M-D  H:mm:ss')
+    //   return year
+    // })
+
     const vm = new Vue({
       el: '#app',
       data: {

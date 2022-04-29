@@ -10,37 +10,38 @@
 
 <body>
   <div id="app">
-    <p>message 的值是：{{ message | capi }}</p>
+    <p>message 的值是：{{ message | cap }}</p>
   </div>
 
   <div id="app2">
-    <p>message 的值是：{{ message | capi }}</p>
+    <p>message 的值是：{{ message | cap }}</p>
   </div>
 
-  <script src="./lib/vue-2.6.12.js"></script>
+  <script src="lib/vue.js"></script>
   <script>
 
-    /*
+    /* filter 
       全局过滤器 - 独立与每个vm实力之外.
       使用 Vue.filter() 定义全局过滤器
       Vue.filter() <-- 接受2个参数,一个是全局过滤器的名字,一个是全局过滤器的处理函数.
     */
-    Vue.filter('capi', function (str) {
+
+    Vue.filter('cap', function (str) {
       const first = str.charAt(0).toUpperCase()
       const other = str.slice(1)
-      return first + other + '~~~'
+      return first + other + "~~~"
     })
 
     const vm = new Vue({
       el: '#app',
       data: {
-        message: 'hello app'
+        message: 'hello app1'
       },
-      // 过滤器函数，必须被定义到 filters 节点之下
+      //   filters  过滤器函数，必须被定义到 filters 节点之下
       // 过滤器本质上是函数
       filters: {
         // 注意：过滤器函数形参中的 val，永远都是“管道符”前面的那个值
-        capi(val) {
+        cap(val) {
           // 字符串有 charAt 方法，这个方法接收索引值，表示从字符串中把索引对应的字符，获取出来
           // val.charAt(0)
           const first = val.charAt(0).toUpperCase()
