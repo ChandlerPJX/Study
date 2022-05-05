@@ -377,6 +377,9 @@ PS: 如果给当前组件的 style 节点添加了 scoped 属性，则当前组�
 ### 官方图解: https://cn.vuejs.org/v2/guide/instance.html#
 
 
+
+
+
 ## 组件之间的数据共享
 ### 组件之间的关系
 
@@ -394,3 +397,122 @@ PS: 如果给当前组件的 style 节点添加了 scoped 属性，则当前组�
 	1. 创建 eventBus.js 模块，并向外共享一个 Vue 的实例对象
 	2.  在数据发送方，调用 bus.$emit('事件名称', 要发送的数据) 方法触发自定义事件 
 	3. 在数据接收方，调用 bus.$on('事件名称', 事件处理函数) 方法注册一个自定义事件
+
+
+## ref
+
+### 1. 什么是 ref 引用
+	ref 用来辅助开发者在不依赖于 jQuery 的情况下，获取 DOM 元素或组件的引用。
+	每个 vue 的组件实例上，都包含一个 $refs 对象，里面存储着对应的 DOM 元素或组件的引用。默认情况下， 组件的 $refs 指向一个空对象。 
+
+### 2. 使用 ref 引用 DOM 元素
+	给元素或组件添加 ref="xxx" 的引用名称
+```html
+   <h1 ref="myh1">App 根组件 </h1>
+```
+
+	
+### 3. 使用 ref 引用组件实例
+	通过 this.$refs.xxx 获取元素或组件的实例
+```js
+ this.$refs.myh1.style.color = 'red'
+```
+
+
+### 4. 控制文本框和按钮的按需切换
+	通过布尔值 inputVisible 来控制组件中的文本框与按钮的按需切换。
+
+
+### 5. 让文本框自动获得焦点
+	当文本框展示出来之后，如果希望它立即获得焦点，则可以为其添加 ref 引用，并调用原生 DOM 对象的 .focus() 方法即可。
+
+### 6. this.$nextTick(cb) 方法
+	组件的 $nextTick(cb) 方法，会把 cb 回调推迟到下一个 DOM 更新周期之后执行。
+	'通俗的理解是:等组件的 DOM 更新完成之后，再执行 cb 回调函数。从而能保证 cb 回调函数可以操作到最新的 DOM 元素。'
+
+
+# 案例练习;购物车案例
+	进行了案例模仿练习.
+
+## 动态组件
+
+### 1. 什么是动态组件
+	动态组件指的是动态切换组件的显示与隐藏。
+
+
+### 2. 如何实现动态组件渲染
+	vue 提供了一个内置的 <component> 组件，专门用来实现动态组件的渲染。
+```js
+ <component :is="comName"></component>
+```
+
+### 3. 使用 keep-alive 保持状态
+	默认情况下，切换动态组件时无法保持组件的状态。此时可以使用 vue 内置的 <keep-alive> 组件保持动态组 件的状态。
+```js
+      <keep-alive >
+        <component :is="comName"></component>
+      </keep-alive>
+```
+
+### 4. keep-alive 对应的生命周期函数
+	当组件被缓存时，会自动触发组件的 deactivated 生命周期函数。 当组件被激活时，会自动触发组件的 activated 生命周期函数。
+```js
+  // 组件被创建时 也会执行activated生命周期
+  activated() {
+    console.log(' left activated')
+  },
+  deactivated() {
+    console.log('left deactivated')
+  }
+```
+
+###  keep-alive 的 include 属性
+	include 属性用来指定:只有名称匹配的组件会被缓存。多个组件名之间使用英文的逗号分隔
+```js
+   <keep-alive include="myLeft">
+        <component :is="comName"></component>
+      </keep-alive>
+```
+
+## 插槽
+### 1. 什么是插槽
+	插槽(Slot)是 vue 为组件的封装者提供的能力。允许开发者在封装组件时，把不确定的、希望由用户指定的 部分定义为插槽。
+### 2. 体验插槽的基础用法
+	在封装组件时，可以通过 <slot> 元素定义插槽，从而为用户预留内容占位符。
+	1. 没有预留插槽的内容会被丢弃
+	   如果在封装组件时没有预留任何 <slot> 插槽，则用户提供的任何自定义内容都会被丢弃。
+	2. 封装组件时，可以为预留的 <slot> 插槽提供后备内容(默认内容)。如果组件的使用者没有为插槽提供任何 内容，则后备内容会生效。
+### 3. 具名插槽
+	如果在封装组件时需要预留多个插槽节点，则需要为每个 <slot> 插槽指定具体的 name 名称。这种带有具体 名称的插槽叫做“具名插槽”
+
+```js
+  <div class="header-box">
+      <slot name="header"></slot>
+    </div>
+
+    <!--  内容  -->
+    <div class="content-box">
+      <slot name="content"></slot>
+    </div>
+    <!--  作者  -->
+    <div class="writer-box">
+
+      <slot name="author"></slot>
+    </div>
+
+``` 
+
+	3.1 为具名插槽提供内容
+	    在向具名插槽提供内容的时候，我们可以在一个 <template> 元素上使用 v-slot 指令，并以 v-slot 的参数的 形式提供其名称。
+```js
+ <template #header>
+        <h4> this is header</h4>
+      </template> <template #content>
+        <h3> this is content</h3>
+      </template>
+      <template #author>
+        <h2> this is author</h2>
+      </template>
+```
+	3.2 具名插槽的简写形式
+	v-slot也有缩写，即 v-slot: 替换为字符 #。例如 v-slot:header 可以被重写为 #header:
