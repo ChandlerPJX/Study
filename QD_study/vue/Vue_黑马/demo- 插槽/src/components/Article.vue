@@ -38,17 +38,14 @@ export default {
 
   .header-box {
     background-color: aqua;
-    color: #2ff010;
   }
 
   .content-box {
     background-color: purple;
-    color: #2e323c;
   }
 
   .writer-box {
     background-color: pink;
-    color: #2255d4;
   }
 }
 

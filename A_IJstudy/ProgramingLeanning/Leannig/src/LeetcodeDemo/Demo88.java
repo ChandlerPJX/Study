@@ -1,7 +1,5 @@
 package LeetcodeDemo;
 
-import java.util.Arrays;
-
 public class Demo88 {
 /*
 给你两个按非递减顺序排列的整数数组nums1 和 nums2，另有两个整数 m 和 n ，分别表示 nums1 和 nums2 中的元素数目。
@@ -17,10 +15,10 @@ public class Demo88 {
 
 
     // 先合并后排序
-    public void merge1(int[] nums1, int m, int[] nums2, int n) {
-        System.arraycopy(nums2, 0, nums1, m, n);
-        Arrays.sort(nums1);
-    }
+//    public void merge1(int[] nums1, int m, int[] nums2, int n) {
+//        System.arraycopy(nums2, 0, nums1, m, n);
+//        Arrays.sort(nums1);
+//    }
 
     // 双指针
     public void merge2(int[] nums1, int m, int[] nums2, int n) {
